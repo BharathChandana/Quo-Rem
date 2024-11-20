@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Quo_Rem
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, div,rem, quo = 0;
+            Console.WriteLine("Enter a number");
+            num=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a divisor");
+            div= Convert.ToInt32(Console.ReadLine());
+
+            if(num>div)
+            {
+                while(num>=div)
+                {
+                    num=num-div;
+                    quo++;
+                }
+                rem = num;
+                Console.WriteLine("Quotient is : "+quo+"  "+"Remainder is : "+rem);
+            }
+            else
+            {
+                Console.WriteLine("Enter a valid input");
+            }
+            Console.ReadKey();
+        }
+    }
+}
